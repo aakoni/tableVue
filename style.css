@@ -1,0 +1,46 @@
+
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 80%;
+  border: 3px solid darkgray;
+  background-color: darkgreen;
+}
+
+
+thead th :nth-child(1) {
+  width: 40%;
+}
+
+thead th :nth-child(2) {
+  width: 10%;
+}
+
+thead th :nth-child(3) {
+  width: 25%;
+}
+
+th, td {
+  padding: 20px;
+}
+
+td img {
+  width: 35px;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #cccccc;
+}
+
+tbody td {
+  text-align: center;
+}

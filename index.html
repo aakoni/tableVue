@@ -1,0 +1,41 @@
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link href="C:\code\src\github.com\aakoni\tableVue\style.css" type="text/css" rel="stylesheet">
+</head>
+
+<div class="container" id="app">
+  <button v-on:click="seen = !seen">Switch</button>
+  <table>
+    <thead>
+      <tr>
+        <th value='Name'>Name</th>
+        <th value='Icon'>Icon</th>
+        <th v-if="seen" class='rec'>Recent</th>
+        <th v-if="!seen" class='alltime'>All Time</th>
+      </tr>
+    </thead>
+    
+    <tbody>
+      <tr v-if="seen" v-for="obj in leaders">
+        <td>{{obj.username}}</td>
+        <td><img :src="obj.img"></td>
+        <td>{{obj.recent}}</td>
+      </tr>
+
+      <tr v-if="!seen" v-for="obj in alltimers">
+        <td>{{obj.username}}</td>
+        <td><img :src="obj.img"></td>
+        <td>{{obj.alltime}}</td>
+      </tr>
+
+
+    </tbody>
+
+  </table>
+  <span v-text="recents"><</span>
+</div>
+
+<script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="C:\code\src\github.com\aakoni\tableVue\script.js"></script>
